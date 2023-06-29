@@ -43,6 +43,16 @@
         "build": {
           "buildTransitive/net6.0/_._": {}
         }
+      },
+      "Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shared.dll": {}
+        }
       }
     }
   },
@@ -114,11 +124,17 @@
         "system.threading.channels.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Shared/1.0.0": {
+      "type": "project",
+      "path": "../Shared/Shared.csproj",
+      "msbuildProject": "../Shared/Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "RabbitMQ.Client >= 6.5.0"
+      "RabbitMQ.Client >= 6.5.0",
+      "Shared >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -153,7 +169,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Mertt\\source\\repos\\RabbitMQ\\Shared\\Shared.csproj": {
+              "projectPath": "C:\\Users\\Mertt\\source\\repos\\RabbitMQ\\Shared\\Shared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

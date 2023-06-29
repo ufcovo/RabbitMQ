@@ -1,7 +1,9 @@
 ﻿using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
+using Shared;
 using System;
 using System.Text;
+using System.Text.Json;
 
 namespace RabbitMQ.Subscriber
 {
@@ -36,8 +38,9 @@ namespace RabbitMQ.Subscriber
 
             consumer.Received += (object? sender, BasicDeliverEventArgs e) => {
                 var message = Encoding.UTF8.GetString(e.Body.ToArray());
+                Product product = JsonSerializer.Deserialize<Product>(message);
                 Thread.Sleep(1000);
-                Console.WriteLine("Coming message: " + message);
+                Console.WriteLine($"Coming message: {product.Id}-{product.Name}-{product.Price}-{product.Stock}");
                 channel.BasicAck(e.DeliveryTag, false);
             };
 
