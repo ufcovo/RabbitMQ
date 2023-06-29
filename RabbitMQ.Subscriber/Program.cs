@@ -15,10 +15,14 @@ namespace RabbitMQ.Subscriber
             using var connection = factory.CreateConnection();
 
             var channel = connection.CreateModel();
-            channel.BasicQos(0, 1, false);
 
+            var randomQueueName = channel.QueueDeclare().QueueName;
+            channel.QueueBind(randomQueueName, "logs-fanout", "", null);
+
+            channel.BasicQos(0, 1, false);
             var consumer = new EventingBasicConsumer(channel);
-            channel.BasicConsume("hello-queue", false, consumer);
+            channel.BasicConsume(randomQueueName, false, consumer);
+            Console.WriteLine("Logs are loading..");
 
             consumer.Received += (object? sender, BasicDeliverEventArgs e) => {
                 var message = Encoding.UTF8.GetString(e.Body.ToArray());
