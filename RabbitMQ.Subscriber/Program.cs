@@ -16,18 +16,19 @@ namespace RabbitMQ.Subscriber
 
             var channel = connection.CreateModel();
 
-            var randomQueueName = channel.QueueDeclare().QueueName;
-            channel.QueueBind(randomQueueName, "logs-fanout", "", null);
+            
 
             channel.BasicQos(0, 1, false);
             var consumer = new EventingBasicConsumer(channel);
-            channel.BasicConsume(randomQueueName, false, consumer);
+            var queueName = "direct-queue-Critical";
+            channel.BasicConsume(queueName, false, consumer);
             Console.WriteLine("Logs are loading..");
 
             consumer.Received += (object? sender, BasicDeliverEventArgs e) => {
                 var message = Encoding.UTF8.GetString(e.Body.ToArray());
                 Thread.Sleep(1000);
                 Console.WriteLine("Coming message: " + message);
+                //File.AppendAllText("log-critical.txt", message + "\n");
                 channel.BasicAck(e.DeliveryTag, false);
             };
 
