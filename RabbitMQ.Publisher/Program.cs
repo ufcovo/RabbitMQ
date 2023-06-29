@@ -16,12 +16,16 @@ namespace RabbitMQ.Publisher
             var channel = connection.CreateModel();
             channel.QueueDeclare("hello-queue", true, false, false);
 
-            string message = "hello world";
-            var messageBody = Encoding.UTF8.GetBytes(message);
+            Enumerable.Range(1, 50).ToList().ForEach(r =>
+            {
+                string message = $"Message {r}";
+                var messageBody = Encoding.UTF8.GetBytes(message);
 
-            channel.BasicPublish(string.Empty, "hello-queue", null, messageBody);
+                channel.BasicPublish(string.Empty, "hello-queue", null, messageBody);
 
-            Console.WriteLine("Message is sended.");
+                Console.WriteLine($"Message is sended: {message}");
+            });
+            
             Console.ReadLine();
         }
     }
