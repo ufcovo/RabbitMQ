@@ -1,6 +1,6 @@
 ﻿namespace RabbitMQWeb.Watermark.Services
 {
-    public class ProductImageCreatedEvent
+    public class productImageCreatedEvent
     {
         public string ImageName { get; set; }
     }

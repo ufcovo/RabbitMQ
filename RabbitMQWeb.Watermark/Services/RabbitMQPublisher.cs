@@ -13,17 +13,14 @@ namespace RabbitMQWeb.Watermark.Services
             _rabbitMQClientService = rabbitMQClientService;
         }
 
-        public void Publish(ProductImageCreatedEvent productImageCreatedEvent)
+        public void Publish(productImageCreatedEvent productImageCreatedEvent)
         {
             var channel = _rabbitMQClientService.Connect();
             var bodyString = JsonSerializer.Serialize(productImageCreatedEvent);
             var bodyByte = Encoding.UTF8.GetBytes(bodyString);
-            var property = channel.CreateBasicProperties();
-            property.Persistent = true;
-            channel.BasicPublish(exchange: RabbitMQClientService.ExchangeName, 
-                routingKey: RabbitMQClientService.RoutingWatermark, 
-                basicProperties:property, 
-                body:bodyByte);
+            var properties = channel.CreateBasicProperties();
+            properties.Persistent = true;
+            channel.BasicPublish(exchange: RabbitMQClientService.ExchangeName, routingKey: RabbitMQClientService.RoutingWatermark, basicProperties: properties, body: bodyByte);
         }
     }
 }
