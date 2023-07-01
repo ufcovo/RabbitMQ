@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Nq8SkarsSeRSqeCrq5fMjPmHMmE1ziUothYD4GPdfLA=",
+  "Hash": "/HQu43e3pKwtltB8LJRDThqlys13xsg2XjpIRGhv5m0=",
   "Source": "RabbitMQWeb.Watermark",
   "BasePath": "_content/RabbitMQWeb.Watermark",
   "Mode": "Default",
@@ -83,6 +83,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Mertt\\source\\repos\\RabbitMQ\\RabbitMQWeb.Watermark\\wwwroot\\images\\27aec4cd-5529-46cf-acb3-71d75c13aff3.jpg",
+      "SourceId": "RabbitMQWeb.Watermark",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Mertt\\source\\repos\\RabbitMQ\\RabbitMQWeb.Watermark\\wwwroot\\",
+      "BasePath": "_content/RabbitMQWeb.Watermark",
+      "RelativePath": "images/27aec4cd-5529-46cf-acb3-71d75c13aff3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\27aec4cd-5529-46cf-acb3-71d75c13aff3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Mertt\\source\\repos\\RabbitMQ\\RabbitMQWeb.Watermark\\wwwroot\\images\\watermarks\\27aec4cd-5529-46cf-acb3-71d75c13aff3.jpg",
+      "SourceId": "RabbitMQWeb.Watermark",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Mertt\\source\\repos\\RabbitMQ\\RabbitMQWeb.Watermark\\wwwroot\\",
+      "BasePath": "_content/RabbitMQWeb.Watermark",
+      "RelativePath": "images/watermarks/27aec4cd-5529-46cf-acb3-71d75c13aff3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\watermarks\\27aec4cd-5529-46cf-acb3-71d75c13aff3.jpg"
     },
     {
       "Identity": "C:\\Users\\Mertt\\source\\repos\\RabbitMQ\\RabbitMQWeb.Watermark\\wwwroot\\js\\site.js",

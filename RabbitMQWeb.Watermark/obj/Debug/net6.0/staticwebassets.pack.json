@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Mertt\\source\\repos\\RabbitMQ\\RabbitMQWeb.Watermark\\wwwroot\\images\\27aec4cd-5529-46cf-acb3-71d75c13aff3.jpg",
+      "PackagePath": "staticwebassets\\images\\27aec4cd-5529-46cf-acb3-71d75c13aff3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mertt\\source\\repos\\RabbitMQ\\RabbitMQWeb.Watermark\\wwwroot\\images\\watermarks\\27aec4cd-5529-46cf-acb3-71d75c13aff3.jpg",
+      "PackagePath": "staticwebassets\\images\\watermarks\\27aec4cd-5529-46cf-acb3-71d75c13aff3.jpg"
+    },
+    {
       "Id": "C:\\Users\\Mertt\\source\\repos\\RabbitMQ\\RabbitMQWeb.Watermark\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
