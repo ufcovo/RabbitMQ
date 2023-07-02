@@ -4037,6 +4037,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shared.dll": {}
+        }
       }
     }
   },
@@ -11436,6 +11446,11 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "Shared/1.0.0": {
+      "type": "project",
+      "path": "../Shared/Shared.csproj",
+      "msbuildProject": "../Shared/Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -11445,7 +11460,8 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.0-preview.5.23280.1",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.0-preview.5.23280.1",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.14",
-      "RabbitMQ.Client >= 6.5.0"
+      "RabbitMQ.Client >= 6.5.0",
+      "Shared >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -11481,7 +11497,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Mertt\\source\\repos\\RabbitMQ\\Shared\\Shared.csproj": {
+              "projectPath": "C:\\Users\\Mertt\\source\\repos\\RabbitMQ\\Shared\\Shared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
