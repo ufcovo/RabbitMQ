@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
+using RabbitMQWeb.ExcelCreate.Hubs;
 using RabbitMQWeb.ExcelCreate.Models;
 
 namespace RabbitMQWeb.ExcelCreate.Controllers
@@ -10,11 +12,14 @@ namespace RabbitMQWeb.ExcelCreate.Controllers
     public class FilesController : ControllerBase
     {
         private readonly AppDbContext _appDbContext;
+        private readonly IHubContext<MyHub> _hubContext;
 
-        public FilesController(AppDbContext appDbContext)
+        public FilesController(AppDbContext appDbContext, IHubContext<MyHub> hubContext)
         {
             _appDbContext = appDbContext;
+            _hubContext = hubContext;
         }
+
         [HttpPost]
         public async Task<IActionResult> Upload(IFormFile file, int fileId)
         {
@@ -32,7 +37,10 @@ namespace RabbitMQWeb.ExcelCreate.Controllers
             userFile.FileStatus = FileStatus.Completed;
 
             await _appDbContext.SaveChangesAsync();
-            //SignalR Notification
+
+            await _hubContext.Clients.User(userFile.UserId).SendAsync("CompletedFile");
+
+
             return Ok();
 
         }

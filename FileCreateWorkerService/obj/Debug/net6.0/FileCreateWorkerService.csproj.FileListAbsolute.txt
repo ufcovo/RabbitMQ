@@ -94,3 +94,12 @@ C:\Users\Mertt\source\repos\RabbitMQ\FileCreateWorkerService\bin\Debug\net6.0\ru
 C:\Users\Mertt\source\repos\RabbitMQ\FileCreateWorkerService\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Mertt\source\repos\RabbitMQ\FileCreateWorkerService\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 C:\Users\Mertt\source\repos\RabbitMQ\FileCreateWorkerService\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\Mertt\source\repos\RabbitMQ\FileCreateWorkerService\bin\Debug\net6.0\ClosedXML.dll
+C:\Users\Mertt\source\repos\RabbitMQ\FileCreateWorkerService\bin\Debug\net6.0\DocumentFormat.OpenXml.dll
+C:\Users\Mertt\source\repos\RabbitMQ\FileCreateWorkerService\bin\Debug\net6.0\ExcelNumberFormat.dll
+C:\Users\Mertt\source\repos\RabbitMQ\FileCreateWorkerService\bin\Debug\net6.0\Irony.dll
+C:\Users\Mertt\source\repos\RabbitMQ\FileCreateWorkerService\bin\Debug\net6.0\SixLabors.Fonts.dll
+C:\Users\Mertt\source\repos\RabbitMQ\FileCreateWorkerService\bin\Debug\net6.0\System.IO.Packaging.dll
+C:\Users\Mertt\source\repos\RabbitMQ\FileCreateWorkerService\bin\Debug\net6.0\XLParser.dll
+C:\Users\Mertt\source\repos\RabbitMQ\FileCreateWorkerService\bin\Debug\net6.0\Shared.dll
+C:\Users\Mertt\source\repos\RabbitMQ\FileCreateWorkerService\bin\Debug\net6.0\Shared.pdb
